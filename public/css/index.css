@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** we design the main contain**/
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F5F7;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/** we design the header of the page **/
+
+header{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color:rgb(76, 45, 123);
+    border-bottom: 2px solid rgb(76, 45, 123);
+}
+
+.header{
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+header div:nth-child(2){
+    margin-right: 100px;
+}
+
+
+.logo-box{
+    margin: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.logo-box img {
+    cursor:pointer;
+    margin: 5px;
+    width: 50px;   /* le logo ne dépasse jamais */
+    height: 50px;  /* conserve le ratio */
+    object-fit: contain;  /* garde toute l’image visible */
+}
+/***** main *****/
+main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex:1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main_element{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main{
+    flex: 1;
+}
+
+.banner{
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+   /* background: url("unischedule_unischedule_logo-removebg-preview.png") no-repeat center; */
+   /* background-size: auto 200%; */
+}
+
+.banner img{
+    height: 70%;
+    width: 60%;
+
+}
+
+.content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1.5;
+    color: #333;
+    background-color:  rgb(104, 80, 157);
+}
+
+.content > h1:first-child{
+    font-family: mon;
+    font-size: 3.5em;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.content p{
+    width: 40%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.content h3{
+    font-size: 2em;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.link{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.link button{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    border: 30px #333 solid;
+    border: none;
+    background-color: #F5F5F7;
+}
+
+.link button a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
