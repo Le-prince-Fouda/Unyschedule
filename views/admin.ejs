@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Homepage</title>
+            <meta charset="utf-8"/>
+            <link rel="stylesheet" type="text/css" href="css/academic.css">
+            <link rel="stylesheet" type="text/css" href="css/front.css">
+            <link rel="stylesheet" type="text/css" href="css/admin.css">
+            <script src="js/academic.js" defer></script>
+        </head>
+        <body>
+            <div class="container">
+                <header>
+                    <div class="header">
+                        <div class="logo-box" >
+                            <a href="/"><img src="img/unischedule_logo_1.png" alt="unyschedule logo"></a>
+                            <h1>unyschedule</h1>
+                        </div>
+                    </div>    
+                    <div>
+                        <h1>ADMIN...</h1>
+                    </div>
+                </header>
+                <main>
+                    <div class="menu">
+                        <h1>Menu</h1>
+                        <nav>
+                            <a href="/academic"><button>acces to academic pole</button></a>
+                            <a href="/timetable"><button>Create timetable</button></a>
+                            <button onclick="onglet(event, 'data')">view data</button>
+                            <button onclick="onglet(event, 'timetable')"> view timetable</button>
+                        </nav>
+                     </div>
+                    <article class="display">
+            
+                        <div id="data">
+                            <h1 class="titre">data registered</h1>
+                            <section class="element">
+                                <h2>Les niveau</h2>
+                                <% for(i=0; i<niv.length; i++){ %>
+                                    <table>
+                                        <tr>
+                                            <td align="center"><%=niv[i].libelle%></td>
+                                        </tr>
+                                    </table> 
+                                <% } %>
+                            </section>
+                            <section class="element">
+                                <h2>Les Departement</h2>
+                                <% for(i=0; i<dep.length; i++){ %>
+                                    <table>
+                                        <tr>
+                                            <td align="center"><%=dep[i].departement%></td>
+                                        </tr>
+                                    </table> 
+                                <% } %>
+                            </section>
+                            <section class="element">
+                                <h2>Enseignant</h2>
+                                <% for(i=0; i<ens.length; i++){ %>
+                                    <table>
+                                        <tr>
+                                            <td align="center"><%=ens[i].id%></td>
+                                            <td align="center"><%=ens[i].nom%></td>
+                                            <td align="center"><%=ens[i].prenom%></td>
+                                        </tr>
+                                    </table> 
+                                <% } %>
+                            </section>
+                            <section class="element">
+                                <h2>Les Salles</h2>
+                                <% for(i=0; i<sal.length; i++){ %>
+                                    <table>
+                                        <tr>
+                                            <td align="center"><%=sal[i].nom%></td>
+                                        </tr>
+                                    </table> 
+                                <% } %>
+                            </section>
+                            <section class="element">
+                                <h2>Les UEs</h2>
+                                <% for(i=0; i<ue.length; i++){ %>
+                                    <table>
+                                        <tr>
+                                            <td align="center"><%=ue[i].id%></td>
+                                            <td align="center"><%=ue[i].libelle%></td>
+                                        </tr>
+                                    </table> 
+                                <% } %>
+                            </section>
+            
+                        </div>
+            
+                        <div id="timetable">
+                            <h1 class="titre">Timetable registered</h1>
+                            
+                        </div>
+            
+                    </article>
+                </main>
+                <footer>
+                    <h3>Quick - Easy - Intuitiv</h3>
+                </footer>  
+            </div>
+        </body>
+    </html>

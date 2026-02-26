@@ -1,0 +1,128 @@
+/**layout of the main part's page**/
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.menu{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    padding-top: 10px;
+    flex: 1.2;
+    border-radius: 4px;
+    background-color: rgb(104, 80, 157);
+
+}
+
+.menu h1{
+    margin-top: 5%;
+}
+
+.menu nav {
+    margin: 0;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.menu nav button{
+    background: inherit;
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: lighter;
+    transition: 0.5s;
+}
+
+/*if even not use, remove it*/
+/* .menu nav button a{
+    text-decoration: none;
+    background-color: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: lighter;
+    letter-spacing: 0.1px;
+
+} */
+
+
+
+
+
+
+nav button:hover{
+    background-color: rgb(125, 25, 145);
+}
+/* nav button:active{
+    background-color: rgb(101, 23, 120);
+}
+nav button.active{
+    background-color: rgb(101, 23, 122);
+} */
+
+
+/********* in the main part we design the article that have the main text**************/
+
+main .display{ 
+    flex: 5;
+    margin: 1%;
+    margin-bottom: 0;
+    border: 3px solid rgb(245, 242, 242);
+    border-radius: 5px/5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: auto;
+    box-shadow:  2px 5px 5px 5px rgb(156, 151, 151);    
+}
+
+.display div{ 
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+   animation: animation 0.5s ease-out ;
+}
+
+/*we must to change the display to flex in the javascript*/
+/*when we change the display to flex in the javascript*/
+.display div{
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* nav{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+} */
+
+
+
+/* nav{
+    margin-left: 10%;
+}
+.titre{
+    text-align: center;
+}
+table{
+    text-align: center;
+}
+article div section{
+    width: 50%;
+    margin: auto;
+} */
+
+foot

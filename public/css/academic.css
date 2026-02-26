@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /*line to delete*/
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+#main{
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+
+/* header{
+    padding: 20px 20px 0px 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(146, 27, 175);
+    color: white;
+} */
+
+/* header h1{
+    padding: 0 0 20px 0;
+}
+
+header div{
+    width: 20%;
+    height: 20%;
+} */
+
+/* nav{
+    margin-left: 20%;
+} */
+
+/* nav button{
+    background: inherit;
+    padding: 5px;
+    margin: 0px;
+    border: none;
+    color: #333;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.5s;
+
+}  */
+
+/* nav button a{
+    background: inherit;
+    padding: 5px;
+    margin: 0px;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    background-color: none;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+
+} */
+
+/* 
+nav button a{
+    font-size: 1.1em;
+    letter-spacing: 0.1px;
+} */
+
+/* nav button:hover{
+    background-color: rgb(125, 25, 145);
+} */
+/* nav button:active{
+    background-color: rgb(101, 23, 120);
+}
+nav button.active{
+    background-color: rgb(101, 23, 122);
+} */
+
+/* article{
+    border: 3px solid rgb(245, 242, 242);
+    border-radius: 5px/5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+    margin-left: 10%;
+    overflow: scroll;
+    box-shadow:  2px 5px 5px 5px rgb(156, 151, 151);
+} */
+
+/* article div{ 
+    width: 100%;
+    margin: 50px;
+    display: none;
+    align-items:space-around;
+    justify-content: space-around;
+   animation: animation 0.5s ease-out ;
+} */
+
+@keyframes animation {
+   from {opacity:0;}
+   to {opacity:1;}
+}
+
+section{
+    padding-top: 10px;
+}
+
+/**** mise en form du formulaire ****/
+legend{
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: algerian, arial, Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+
+}
+
+form table{
+    padding-top: 20px;
+    margin:auto;
+}
+
+/*********mise en forme des bouton de validation des formulaire******/
+.btn{
+    width: 100px;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid silver;
+    transition: all .5s ease-in;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+    background-color: rgb(202, 114, 224);
+    border-color: rgb(216, 188, 223);
+    -moz-box-shadow: 0 0 8px rgb(101, 23, 122); 
+    -webkit-box-shadow: 0 0 8px rgbargb(101, 23, 122);  
+    box-shadow: 4px 4px 8px rgba(101, 23, 122, 0.5); 
+}
+
+input { 
+    padding: 2px; 
+    border: none;
+    border-bottom: 2px solid silver;  
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px; 
+    border-radius: 2px; 
+    outline: none;
+    /* Retire la bordure orange appliquée par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */ 
+} 
+
+input:focus {  
+    border-color: rgb(166, 84, 187) 
+    -moz-box-shadow: 0 0 8px rgb(101, 23, 122); 
+    -webkit-box-shadow: 0 0 8px rgbargb(101, 23, 122);  
+    box-shadow: 4px 4px 8px rgba(101, 23, 122, 0.5);
+}
+
+.validation{
+    margin-top: 5px;
+    padding: 0;
+}
+
+
+
+/***** Style du footer ***/
+/* footer{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(104, 80, 157);
+    display: flex;
+    justify-content: stretch;
+}
+
+footer h4{
+    color: #333;
+    
+} */
