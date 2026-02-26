@@ -1,7 +1,13 @@
+# Dependencies Directories
 node_modules/
 .env
+#
 dist/
+#
 build/
+#
 *.log
+# Other files
 Folder/
+#
 .vscode/
