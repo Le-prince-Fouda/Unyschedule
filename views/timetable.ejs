@@ -1,0 +1,126 @@
+<!-- EJS page-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Time table of University</title>
+            <meta charset="utf-8"/>
+            <link rel="stylesheet" type="text/css" href="css/timetable.css">
+            <script src="js/timetable.js" defer></script>
+        </head>
+        <body>
+            <div id="main">
+                <header>
+                    <h1>Time table of University</h1>
+                    <nav>
+                        <button onclick="onglet(event, 'commencer')" id="menu_commencer">Commencer</button>
+                        <button onclick="onglet(event, 'valider')" id="menu_valider"> Valider</button>
+                    </nav>
+                </header>
+                <article>
+
+                    <div id="commencer">
+                        <form action="/timetable" method="post" id="form_commencer">
+                            <legend>Entrez le departement dont vous souhaitez faire la plannification des cours</legend>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <select name="confirm_dep" id="confirm_dep" required>
+                                            <option value="--">selectionner un departement</option>
+                                             <% for(i=0; i<dep.length; i++) { %>
+                                                 <option value="<%=dep[i].departement%>"> <%=dep[i].departement %> </option>
+                                             <% } %>
+                                         </select>
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="Valider" id="btn_valider"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </form>
+
+                    </div>
+
+                    <!--Validation de l'emploie de temps-->
+                    <div id="valider">
+                        <form action="/timetable" method="post" id="form_valider">
+
+                            <% for(var i=0; i<dep.length; i++) { %>
+
+                                <table id="<%=dep[i].departement%>">
+                                    <caption><%=dep[i].departement%></caption>
+                                    <% for(var j=0; j<niv.length; j++) { %>
+                                        <% if(dep[i].id == niv[j].id_dep) { %>
+                                            <tr>
+                                                <td colspan="6" class="colore" align="center">
+                                                    <%=niv[j].libelle%>
+                                                </td>
+                                            </tr>
+                                                    <% for(var m=0; m<ue.length; m++) { %>
+                                                        <% if(ue[m].id_nu == niv[j].id) { %>
+                                                            <tr>
+                                                                <td class="colore" align="center">
+                                                                    <input type="text" value="<%=ue[m].id%>" size="10" disabled>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <select name="jour" class="jour">
+                                                                        <option value="">--jour--</option>
+                                                                        <% for(var n=0; n<jour.length; n++) { %>
+                                                                            <option value="<%=jour[n].id %>"><%=jour[n].jour %></option>
+                                                                        <% } %>
+                                                                    </select>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <select name="salle" class="salle">
+                                                                        <option value="--">--salle--</option>
+                                                                        <% for(var n=0; n<salle.length; n++) { %>
+                                                                            <option value="<%=salle[n].id %>"><%=salle[n].nom %></option>
+                                                                        <% } %>
+                                                                    </select>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <select name="enseignant" class="enseignant" onchange="appel(this)">
+                                                                        <option value="--">--Enseignant--</option>
+                                                                        <% for(var n=0; n<enseignant.length; n++) { %>
+                                                                            <option value="<%=enseignant[n].id %>"><%=enseignant[n].nom %></option>
+                                                                        <% } %>
+                                                                    </select>
+                                                                </td>
+                                                                <td align="center">
+                                                                    <select name="horaire" class="horaire" >
+                                                                        <option value="">--horaire--</option>
+                                                                    </select>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                        <% } %>
+
+                                                    <% } %>
+                                        <% } %>
+                                    <% } %>
+
+                                </table>
+
+                            <% } %>
+                            <table id="envoyer">
+                                <tr>
+                                    <td><input type="reset" value="anuler" class="btn"/></td>
+                                    <td><input type="submit" value="envoyer" class="btn" /></td>
+                                </tr>
+                            </table>
+                            
+
+                        </form>
+                    </div>
+
+                </article>
+
+                
+            </div>
+
+            <footer>
+                <h4>Creez vos emploi de temps avec simplicité </h4>
+            </footer>
+
+        </body>
+    </html>
