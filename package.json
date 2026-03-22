@@ -4,7 +4,8 @@
   "description": "global and partial creation and modification of timetables and the db school informations",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "timetable",
@@ -17,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^17.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-myconnection": "^1.0.4",

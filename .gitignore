@@ -5,7 +5,7 @@ node_modules/
 dist/
 #
 build/
-#
+#gi
 *.log
 # Other files
 Folder/
