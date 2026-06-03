@@ -2,23 +2,23 @@
 require('dotenv').config(); // to acces to the variable in .env file ***
 const db = require('./db'); // we import the file that control the db connection
 const express= require('express');
-const mysql= require('mysql2');
+//const mysql= require('mysql2');                           // to delete
 const ejs= require('ejs');
 const bodyParser= require('body-parser');
-const myconnexion= require('express-myconnection');
+//const myconnexion= require('express-myconnection');       // to delete
 const route= require('./routes/routesP');
-const connection = require('express-myconnection');
-const { connect } = require('./routes/routesP');
+//const connection = require('express-myconnection');       // to delete
+//const { connect } = require('./routes/routesP');          // to delete
 
 
-//option to the local server
-const optionBd={
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    port: 3306,
-    database: 'unyschedule_db'
-}
+// //option to the local server
+// const optionBd={
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     port: 3306,
+//     database: 'unyschedule_db'
+// }
 
 
 //instanciation
@@ -27,7 +27,7 @@ const app= express();
 // /////// connexion a la bd
 // app.use(myconnexion(mysql, optionBd, 'pool'))
 
-//connexion with .env data
+// //connexion with .env data
 // async function testConnection() {
 //   try {
 //     // On tente de récupérer les données de votre table
