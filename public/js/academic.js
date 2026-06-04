@@ -1,5 +1,5 @@
-//importrant variable declaration
-var contenu= document.querySelectorAll('article div');
+//importrant declaration de variables
+var contenu= document.querySelectorAll('article > div');
 var contenuLength= contenu.length,
     menu=document.querySelectorAll('nav button'),
     menuLength= menu.length;
@@ -18,7 +18,7 @@ function onglet(evt, nom){
    evt.currentTarget.className+= 'active'
 }
 
-//Pour le formulaire d'enregistrement des niveau les champs des effectifs 
+//Pour le formulaire d'enregistrement des niveaux les champs des effectifs 
 //ne s'affichent que si le departement correspondant est selectionne
 var effectif= document.getElementsByClassName('effectif'),
       check= document.getElementsByName('check');
@@ -53,7 +53,7 @@ for(var checkbox of check){
 
 
 
-//fonction permettant se verifier au moins une des cases a cocher du formulaire est selectionnee
+//fonction permettant de verifier si au moins une des cases a cocher du formulaire est selectionnee
 //Sinon le formulaire ne peut etre soumis et un message d'erreur est envoyer 
 (function(){
       var niv= document.getElementById('form_niv'),
