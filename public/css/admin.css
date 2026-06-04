@@ -79,7 +79,8 @@ main{
 
 
 nav button:hover{
-    background-color: rgb(125, 25, 145);
+    color: #F5F5F7; ;
+    background-color:  #4C2D7B;
 }
 /* nav button:active{
     background-color: rgb(101, 23, 120);
@@ -121,7 +122,11 @@ main .display{
 }
 
 
+.menu .active{
+    background-color: #4C2D7B;
+    color: #F5F5F7;;
 
+}
 
 
 

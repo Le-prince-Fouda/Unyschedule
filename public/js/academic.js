@@ -1,21 +1,21 @@
 //importrant declaration de variables
-var contenu= document.querySelectorAll('article > div');
-var contenuLength= contenu.length,
+var content= document.querySelectorAll('article > div');
+var contentLength= content.length,
     menu=document.querySelectorAll('nav button'),
     menuLength= menu.length;
 
 
 // function 
 function onglet(evt, nom){
-   for(var i=0; i<contenuLength; i++){
-      contenu[i].style.display='none';
-      contenu[i].className= contenu[i].className.replace('affiche', '');
+   for(var i=0; i < contentLength; i++){
+      content[i].style.display='none';
+      content[i].classList.remove('affiche');
    }
-   for(var i=0; i<menuLength; i++){
-      menu[i].className= menu[i].className.replace('active', '');
+   for(var i=0; i < menuLength; i++){
+      menu[i].classList.remove('active');
    }
    document.getElementById(nom).style.display= 'block';
-   evt.currentTarget.className+= 'active'
+   evt.currentTarget.classList.add('active')
 }
 
 //Pour le formulaire d'enregistrement des niveaux les champs des effectifs 
