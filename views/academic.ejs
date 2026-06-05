@@ -292,131 +292,124 @@
                         </div>
 
 
-                        <div id="ue">
+                        <div id="ue" class="form-box">
                             <form action="/academic" method="post" id="form_ue">
-                                <legend>Ajouter une UE</legend>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <label for="code_ue">code</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="code_ue" name="code_ue" placeholder="code000" required onkeyup="this.value=this.value.toUpperCase()"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="lib">Libelle</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="lib" name="lib" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="dep_ue" title="departement auquel appartient l'Unite d'enseignement">Departement responsable</label>
-                                        </td>
-                                        <td>
-                                            <select name="dep_ue" id="dep_ue" required>
-                                            <option value="">selectionner un departement</option>
-                                                <% for(i=0; i<dep.length; i++) { %>
-                                                    <option value="<%=dep[i].id%>"> <%=dep[i].departement %> </option>
-                                                <% } %>
+                                <h2> 
+                                    <span class="title-icon">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                    </span> 
+                                    Add a subject
+                                </h2>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="code_ue">Code</label>
+                                        <input type="text" id="code_ue" name="code_ue" placeholder="code000" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lib">Subject</label>
+                                        <input type="text" id="lib" name="lib" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dep_ue" >Respnsible departement</label>
+                                        <select name="dep_ue" id="dep_ue" required>
+                                        <option value="">select a departement</option>
+                                            <% for(i=0; i<dep.length; i++) { %>
+                                                <option value="<%=dep[i].id%>"> <%=dep[i].departement %> </option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <label for="niv">Academic year</label>
+                                        <select name="niv" id="niv" required>
+                                            <option value="">select an academic year</option>
+                                            <% for(i=0; i<niv.length; i++) { %>
+                                                <option value="<%=niv[i].id%>"> <%=niv[i].libelle %> </option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="filiere">academic field</label>
+                                        <select name="filiere" id="filiere" required>
+                                            <option value="">---</option>
                                             </select>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <fieldset>
-                                    <legend>Info sup</legend>
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <label for="niv" title="niveau ou sera dispense l'unite d'enseignement">Niveau</label>
-                                            </td>
-                                            <td>
-                                                <select name="niv" id="niv" required>
-                                                    <option value="">selectionner niveau</option>
-                                                    <% for(i=0; i<niv.length; i++) { %>
-                                                        <option value="<%=niv[i].id%>"> <%=niv[i].libelle %> </option>
-                                                    <% } %>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label for="filiere" title="filiere ou sera dispense l'unite d'enseignement">filiere d'accueil</label>
-                                            </td>
-                                            <td>
-                                                <select name="filiere" id="filiere" required>
-                                                <option value="">---</option>
-                                                    
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <table id="tab_spec">
-                                        
-                                    </table>
-                                </fieldset>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <input type="reset" class="btn"/>
-                                        </td>
-                                        <td>
-                                            <input type="submit" class="btn"/>
-                                        </td>
-                                    </tr>
-                                </table>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid" id="tab_spec">
+                                    <!-- ......... -->
+                                    <!-- ......... -->
+                                    <!-- ......... -->
+                                    <!-- ......... -->
+                                    <!-- ......... -->
+                                </div>
+
+                                <div class="btn-icon">
+                                    <div class="icon">
+                                        <!-- une illustration -->
+                                    </div>
+                                    <div class="btn">
+
+                                        <button type="reset" class="btn-reset">
+                                            Reset
+                                        </button>
+
+                                        <button type="submit" class="btn-submit">
+                                            Submit
+                                        </button>
+
+                                    </div>
+                                </div>
                             </form>
                         </div>
 
-                        <div id="specialite">
+                        <div id="specialite" class="form-box">
                             <form action="/academic" method="post" id="form_spec">
-                                <legend>Ajouter une Specialite</legend>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <label for="speciality">Speciality</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="speciality" size="50" name="speciality" placeholder="speciality" required onkeyup="this.value=this.value.toUpperCase()"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="spec_dep">Department</label>
-                                        </td>
-                                        <td>
-                                            <select name="spec_dep" id="spec_dep" required>
-                                                <option value="">select departement</option>
-                                                <% for(i=0; i<dep.length; i++) { %>
-                                                    <option value="<%=dep[i].departement%>"> <%=dep[i].departement %> </option>
-                                                <% } %>
-                                            </select>
-                                        </td>
-                                    </tr>
+                                <h2> 
+                                    <span class="title-icon">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                    </span> 
+                                    Add a specialisation
+                                </h2>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="speciality">Speciality</label>
+                                        <input type="text" id="speciality" size="50" name="speciality" placeholder="speciality" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        
+                                    </div>
+                                    <div form-group>
+                                        <label for="spec_dep">Department</label>
+                                        <select name="spec_dep" id="spec_dep" required>
+                                            <option value="">select departement</option>
+                                            <% for(i=0; i<dep.length; i++) { %>
+                                                <option value="<%=dep[i].departement%>"> <%=dep[i].departement %> </option>
+                                            <% } %>
+                                        </select>
+                                    </div>
                                     <% for(i=0; i<niv.length; i++) { %>
-                                        <tr>
-                                            <td>
+                                        <div class="form-group">
                                                 <label for="<%=niv[i].id%>"><%=niv[i].libelle%></label>
-                                            </td>
-                                            <td>
                                                 <input type="checkbox" id="<%=niv[i].id%>" name="niv_spec" value="<%=niv[i].id%>"  />
-                                            </td>
-                                        </tr>
+                                            
+                                        </div>
                                     <% } %>
-                                </table>
-                                <table class="validation">
-                                    <tr>
-                                        <td align="center">
-                                            <input type="reset" class="btn"/>
-                                        </td>
-                                        <td align="center">
-                                            <input type="submit" class="btn"/>
-                                        </td>
-                                    </tr>
-                                </table>
+                                </div>
+                                <div class="btn-icon">
+                                    <div class="icon">
+                                        <!-- une illustration -->
+                                    </div>
+                                    <div class="btn">
+
+                                        <button type="reset" class="btn-reset">
+                                            Reset
+                                        </button>
+
+                                        <button type="submit" class="btn-submit">
+                                            Submit
+                                        </button>
+
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         
