@@ -34,7 +34,194 @@
                     <article class="display">
             
                         <div id="data">
-                            <h1 class="titre">data registered</h1>
+                            <h1 class="titre">recorded data</h1>
+
+
+
+
+                            <div class="view-data"> <!-- ajout -->
+
+                                <section class="element">
+
+                                    <div class="table-container">
+
+                                        <table class="styled-table">
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Niveau</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <% for(i = 0; i < niv.length; i++) { %>
+                                                    <tr>
+                                                        <td><%= niv[i].libelle %></td>
+                                                    </tr>
+                                                <% } %>
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+
+                                </section>
+
+                                <section class="element">
+
+                                <div class="table-container">
+
+                                    <table class="styled-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Département</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <% for(i = 0; i < dep.length; i++){ %>
+                                                <tr>
+                                                    <td><%= dep[i].departement %></td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </section>
+
+                            <section class="element">
+
+                                <div class="table-container">
+
+                                    <table class="styled-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Nom</th>
+                                                <th>Prénom</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <% for(i = 0; i < ens.length; i++){ %>
+                                                <tr>
+                                                    <td><%= ens[i].id %></td>
+                                                    <td><%= ens[i].nom %></td>
+                                                    <td><%= ens[i].prenom %></td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </section>
+
+                            <section class="element">
+
+                                <div class="table-container">
+
+                                    <table class="styled-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Nom de la salle</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <% for(i = 0; i < sal.length; i++){ %>
+                                                <tr>
+                                                    <td><%= sal[i].nom %></td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </section>
+
+                            <section class="element">
+
+                                <div class="table-container">
+
+                                    <table class="styled-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Libellé</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <% for(i = 0; i < ue.length; i++){ %>
+                                                <tr>
+                                                    <td><%= ue[i].id %></td>
+                                                    <td><%= ue[i].libelle %></td>
+                                                </tr>
+                                            <% } %>
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </section>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+
+
+
                             <section class="element">
                                 <h2>Les niveau</h2>
                                 <% for(i=0; i<niv.length; i++){ %>
@@ -45,6 +232,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les Departement</h2>
                                 <% for(i=0; i<dep.length; i++){ %>
@@ -55,6 +243,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Enseignant</h2>
                                 <% for(i=0; i<ens.length; i++){ %>
@@ -67,6 +256,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les Salles</h2>
                                 <% for(i=0; i<sal.length; i++){ %>
@@ -77,6 +267,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les UEs</h2>
                                 <% for(i=0; i<ue.length; i++){ %>
