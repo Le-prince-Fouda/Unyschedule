@@ -4,6 +4,7 @@
             <title>Homepage</title>
             <meta charset="utf-8"/>
             <!-- <link rel="stylesheet" type="text/css" href="css/academic.css"> -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link rel="stylesheet" type="text/css" href="css/front.css">
             <link rel="stylesheet" type="text/css" href="css/admin.css">
             <script src="js/academic.js" defer></script>
@@ -27,198 +28,85 @@
                         <nav>
                             <a href="/academic"><button>acces to academic pole</button></a>
                             <a href="/timetable"><button>Create timetable</button></a>
-                            <button onclick="onglet(event, 'data')">view data</button>
+                            <button onclick="onglet(event, 'view-data')">view data</button>
                             <button onclick="onglet(event, 'timetable')"> view timetable</button>
                         </nav>
                      </div>
                     <article class="display">
-            
-                        <div id="data">
-                            <h1 class="titre">recorded data</h1>
 
-
-
-
-                            <div class="view-data"> <!-- ajout -->
-
-                                <section class="element">
-
-                                    <div class="table-container">
-
-                                        <table class="styled-table">
-
-                                            <thead>
-                                                <tr>
-                                                    <th>Niveau</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <% for(i = 0; i < niv.length; i++) { %>
-                                                    <tr>
-                                                        <td><%= niv[i].libelle %></td>
-                                                    </tr>
-                                                <% } %>
-                                            </tbody>
-
-                                        </table>
+                        <!-- Card container -->
+                        <div id="view-data">
+                            <h2 class="view-data-header">
+                                Recorded Data
+                            </h2>
+                            <div class="card-container-img">
+                                <div class="card-container">
+                                    <div class="card card-prof">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-solid fa-user-tie"></i>
+                                            </span>
+                                            <span class="card-title">Professors</span>
+                                        </div>
+                                        <span>33</span>
 
                                     </div>
-
-                                </section>
-
-                                <section class="element">
-
-                                <div class="table-container">
-
-                                    <table class="styled-table">
-
-                                        <thead>
-                                            <tr>
-                                                <th>Département</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <% for(i = 0; i < dep.length; i++){ %>
-                                                <tr>
-                                                    <td><%= dep[i].departement %></td>
-                                                </tr>
-                                            <% } %>
-                                        </tbody>
-
-                                    </table>
-
+                                    <div class="card card-room">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-door-open"></i>
+                                            </span>
+                                            <span class="card-title">Rooms</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    <div class="card card-subject">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-book-open"></i>
+                                            </span>
+                                            <span class="card-title">Subjects</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    
+                                    <div class="card card-year">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-graduation-cap"></i>
+                                            </span>
+                                            <span class="card-title">Academic Years</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    <div class="card card-special">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="card-title">Specialisation</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    
+                                    <div class="card card-dep">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-solid fa-building-columns"></i>
+                                            </span>
+                                            <span class="card-title">Department</span>
+                                        </div>
+                                        <span>33</span>
+                                    </div>
                                 </div>
-
-                            </section>
-
-                            <section class="element">
-
-                                <div class="table-container">
-
-                                    <table class="styled-table">
-
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Nom</th>
-                                                <th>Prénom</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <% for(i = 0; i < ens.length; i++){ %>
-                                                <tr>
-                                                    <td><%= ens[i].id %></td>
-                                                    <td><%= ens[i].nom %></td>
-                                                    <td><%= ens[i].prenom %></td>
-                                                </tr>
-                                            <% } %>
-                                        </tbody>
-
-                                    </table>
-
+                                <div class="card-img">
+                                    <img src="img/img5.png" alt="">
                                 </div>
-
-                            </section>
-
-                            <section class="element">
-
-                                <div class="table-container">
-
-                                    <table class="styled-table">
-
-                                        <thead>
-                                            <tr>
-                                                <th>Nom de la salle</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <% for(i = 0; i < sal.length; i++){ %>
-                                                <tr>
-                                                    <td><%= sal[i].nom %></td>
-                                                </tr>
-                                            <% } %>
-                                        </tbody>
-
-                                    </table>
-
-                                </div>
-
-                            </section>
-
-                            <section class="element">
-
-                                <div class="table-container">
-
-                                    <table class="styled-table">
-
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Libellé</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <% for(i = 0; i < ue.length; i++){ %>
-                                                <tr>
-                                                    <td><%= ue[i].id %></td>
-                                                    <td><%= ue[i].libelle %></td>
-                                                </tr>
-                                            <% } %>
-                                        </tbody>
-
-                                    </table>
-
-                                </div>
-
-                            </section>
-
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            
-
-
-
+                        </div>
+                        <!-- Data container -->
+                        <div id="data">
+                            <h1 class="titre">recorded data</h1>
 
 
 
@@ -282,16 +170,14 @@
             
                         </div>
             
+                        <!-- schedule container -->
                         <div id="timetable">
                             <h1 class="titre">Timetable registered</h1>
                             
                         </div>
             
                     </article>
-                </main>
-                <footer>
-                    <h3>Quick - Easy - Intuitiv</h3>
-                </footer>  
+                </main> 
             </div>
         </body>
     </html>
