@@ -39,32 +39,31 @@
                         <h1>Menu</h1>
                         <!-- <h2>Academic pole of University</h2> -->
                         <nav>
-                            <button onclick="onglet(event, 'ens')" class="">Enseignant</button>
-                            <button onclick="onglet(event, 'salle')"> Salle</button>
+                            <button onclick="onglet(event, 'prof')" class="">Professor</button>
+                            <button onclick="onglet(event, 'room')"> Room</button>
                             <button onclick="onglet(event, 'depart')">Departement</button>
-                            <button onclick="onglet(event, 'niveau')">Niveau</button>
-                            <button onclick="onglet(event, 'ue')">UE</button>
-                            <button onclick="onglet(event, 'specialite')">Specialite</button>
+                            <button onclick="onglet(event, 'year')">Academic Year</button>
+                            <button onclick="onglet(event, 'subject')">Subject</button>
+                            <button onclick="onglet(event, 'special')">Specialisation</button>
                         </nav>
                     </div>
 
 
                     <article class="display">
 
-                        <div id="ens" class="affiche form-box">
+                        <div id="prof" class="show form-box">
                             <form action="/academic" method="post">
 
                                 <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-solid fa-user-tie"></i>
                                     </span> 
                                     Add a Professor
                                 </h2>
-                                
                                 <div class="form-grid">
 
                                     <div class="form-group">
-                                        <label for="code">Code</label>
+                                        <label for="code" class="label">Code</label>
                                         <div class="input-fa">
 
                                             <i class="fa-solid fa-key"></i>
@@ -74,7 +73,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="name">Name</label>
+                                        <label for="name" class="label">Name</label>
                                         <div class="input-fa">
                                             
                                             <i class="fa-regular fa-user"></i>
@@ -84,7 +83,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="firstname">Firstname</label>
+                                        <label for="firstname" class="label">Firstname</label>
                                         <div class="input-fa">
                                             
                                             <i class="fa-regular fa-user"></i>
@@ -94,7 +93,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="E-mail">E-mail</label>
+                                        <label for="E-mail" class="label">E-mail</label>
                                         <div class="input-fa">
                                             
                                             <i class="fa-regular fa-envelope"></i>
@@ -104,7 +103,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="tel">Phone</label>
+                                        <label for="tel" class="label">Phone</label>
                                         <div class="input-fa">
                                             
                                             <i class="fa-solid fa-phone"></i>
@@ -115,7 +114,7 @@
 
                                     <div class="form-group">
 
-                                        <label for="dep">Departement</label>
+                                        <label for="dep" class="label">Departement</label>
                                         <div class="input-fa">
                                             
                                             <i class="fa-solid fa-building-columns"></i>
@@ -131,75 +130,73 @@
 
                                 </div>
 
-                                <div class="btn-icon">
-                                    <div class="icon">
-                                        <!-- une illustration -->
-                                    </div>
-                                    <div class="btn">
+                                <div class="btn">
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                    </div>
                                 </div>
 
                             </form>
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
+
                             
                         </div>
 
 
 
-                        <div id="salle" class="form-box">
+                        <div id="room" class="form-box">
                             <form action="/academic" method="post" id="form_salle">
                                 <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-solid fa-door-open"></i>
                                     </span> 
                                     Add a room
                                 </h2>
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <label for="room">Room</label>
+                                        <label for="room" class="label">Room</label>
                                         <div class="input-fa">
 
-                                            <i class="fa-solid fa-key"></i>
+                                            <i class="fa-solid fa-door-open"></i>
                                             <input type="text" id="room" name="room" placeholder="room" required onkeyup="this.value=this.value.toUpperCase()"/>
                                             
                                         </div>
                                     </div >
                                     <div class="form-group">
-                                        <label for="capacity">Capacity</label>
+                                        <label for="capacity" class="label">Capacity</label>
                                         <div class="input-fa">
 
-                                            <i class="fa-solid fa-key"></i>
+                                            <i class="fa-solid fa-users"></i>
                                             <input type="number" id="capacity" name="capacity" placeholder="000000000" required maxlength="9">
 
                                             
                                         </div>
                                     </div >
                                 </div>
-                                <div class="btn-icon">
-                                    <div class="icon">
-                                        <!-- une illustration -->
-                                    </div>
-                                    <div class="btn">
+                                <div class="btn">
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                    </div>
                                 </div>
                             </form>
+                            
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
                         </div>
 
 
@@ -207,132 +204,157 @@
                             <form action="/academic" method="post">
                                 <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-solid fa-building-columns"></i>
                                     </span> 
                                     Add a department
                                 </h2>
                                 <div class="form-grid">
-                                    <div class="form-group">
-                                            <label for="departement">Departement</label>
+                                    <div class="form-group dep-info">
+                                            <label for="departement" class="label">Departement</label>
                                             <div class="input-fa">
 
-                                            <i class="fa-solid fa-key"></i>
+                                            <i class="fa-solid fa-building-columns"></i>
                                             <input type="text" id="departement" name="departement" placeholder="departement" required onkeyup="this.value=this.value.toUpperCase()"/>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="btn-icon">
-                                    <div class="icon">
-                                        <!-- une illustration -->
-                                    </div>
-                                    <div class="btn">
+                                <div class="btn">
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                    </div>
                                 </div>
                             </form>
+                            
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
                         </div>
 
 
-                        <div id="niveau" class=" form-box">
+                        <div id="year" class=" form-box">
                             <form action="/academic" method="post" id="form_niv">
                                  <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-solid fa-chart-line"></i>
                                     </span> 
                                     Add an academeic year
                                 </h2>
                                 <div class="form-grid">
                                     <div class="form-group">
                                         
-                                        <label for="libelle">Niveau</label>
-                                        <input type="text" id="libelle" name="libelle" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        <label for="libelle" class="label">Academic Year</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <input type="text" id="libelle" name="libelle" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
                                 
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <!-- vide -->
                                     </div>
-                                    <div class="form-group">
-                                        <% for(i=0; i<dep.length; i++) { %>
-                                            
-                                            <label for="<%=dep[i].departement%>"><%=dep[i].departement %></label>
-                                            <input type="checkbox" id="<%=dep[i].departement%>" name="check" value="<%=dep[i].id%>" />
-                                                
+                                    <% for(i=0; i<dep.length; i++) { %>
+                                        
                                         <div class="form-group">
-                                                <input type="number" class="effectif" name="" placeholder="500"  />
+                                            <label for="<%=dep[i].departement%>" class="label-checkbox">
+                                                <div class="circle-checkbox">
+                                                    <!-- To create a circular checkbox -->
+                                                </div>
+                                                <input type="checkbox" id="<%=dep[i].departement%>" name="check" class="checkbox" value="<%=dep[i].id%>" />
+                                                <p>
+                                                    <%=dep[i].departement %>
+                                                </p>
+                                                </label>                                        
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="nb-student-container effectif">
+                                                <label for="nb_student" class="label">Number of students</label>
+                                                <input type="number" class="" name="nb_student" placeholder="500"  />
                                             </div>
-                                        <% } %>
-                                    </div>
+                                        </div>
+                                    <% } %>
                                 </div>
-                                <div class="btn-icon">
-                                    <!-- <div class="icon"> -->
-                                        <!-- une illustration -->
-                                    <!-- </div> -->
-                                    <div class="btn">
+                                <div class="btn">
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                    </div>
                                 </div>
                             </form>
+                            
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
                         </div>
 
 
-                        <div id="ue" class="form-box">
+                        <div id="subject" class="form-box">
                             <form action="/academic" method="post" id="form_ue">
                                 <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-solid fa-book-open"></i>
                                     </span> 
                                     Add a subject
                                 </h2>
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <label for="code_ue">Code</label>
-                                        <input type="text" id="code_ue" name="code_ue" placeholder="code000" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        <label for="code_ue" class="label">Code</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-key"></i>
+                                            <input type="text" id="code_ue" name="code_ue" placeholder="code000" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="lib">Subject</label>
-                                        <input type="text" id="lib" name="lib" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        <label for="lib" class="label">Subject</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-book-open"></i>
+                                            <input type="text" id="lib" name="lib" placeholder="libelle" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="dep_ue" >Respnsible departement</label>
-                                        <select name="dep_ue" id="dep_ue" required>
-                                        <option value="">select a departement</option>
-                                            <% for(i=0; i<dep.length; i++) { %>
-                                                <option value="<%=dep[i].id%>"> <%=dep[i].departement %> </option>
-                                            <% } %>
-                                        </select>
+                                        <label for="dep_ue" class="label">Responsible departement</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-building-columns"></i>
+                                            <select name="dep_ue" id="dep_ue" required>
+                                                <option value="">select a departement</option>
+                                                <% for(i=0; i<dep.length; i++) { %>
+                                                    <option value="<%=dep[i].id%>"> <%=dep[i].departement %> </option>
+                                                <% } %>
+                                            </select>
+                                        </div>
                                     </div>
                                 
                                     <div class="form-group">
-                                        <label for="niv">Academic year</label>
-                                        <select name="niv" id="niv" required>
-                                            <option value="">select an academic year</option>
-                                            <% for(i=0; i<niv.length; i++) { %>
-                                                <option value="<%=niv[i].id%>"> <%=niv[i].libelle %> </option>
-                                            <% } %>
-                                        </select>
+                                        <label for="niv" class="label">Academic year</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <select name="niv" id="niv" required>
+                                                <option value="">select an academic year</option>
+                                                <% for(i=0; i<niv.length; i++) { %>
+                                                    <option value="<%=niv[i].id%>"> <%=niv[i].libelle %> </option>
+                                                <% } %>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="filiere">academic field</label>
-                                        <select name="filiere" id="filiere" required>
-                                            <option value="">---</option>
+                                        <label for="filiere" class="label">academic field</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                            <select name="filiere" id="filiere" required>
+                                                <option value="">---</option>
                                             </select>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -343,79 +365,85 @@
                                     <!-- ......... -->
                                     <!-- ......... -->
                                 </div>
+                                <div class="btn">
 
-                                <div class="btn-icon">
-                                    <div class="icon">
-                                        <!-- une illustration -->
-                                    </div>
-                                    <div class="btn">
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
-
-                                    </div>
                                 </div>
                             </form>
+                            
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
                         </div>
 
-                        <div id="specialite" class="form-box">
+                        <div id="special" class="form-box">
                             <form action="/academic" method="post" id="form_spec">
                                 <h2> 
                                     <span class="title-icon">
-                                        <i class="fa-solid fa-user-plus"></i>
+                                        <i class="fa-regular fa-star"></i>
                                     </span> 
                                     Add a specialisation
                                 </h2>
                                 <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="speciality">Speciality</label>
-                                        <input type="text" id="speciality" size="50" name="speciality" placeholder="speciality" required onkeyup="this.value=this.value.toUpperCase()"/>
+                                    <div class="form-group special-info">
+                                        <label for="speciality" class="label">Speciality</label>
+                                        <div class="input-fa">
+                                            <i class="fa-regular fa-star"></i>
+                                            <input type="text" id="speciality" size="50" name="speciality" placeholder="speciality" required onkeyup="this.value=this.value.toUpperCase()"/>
                                         
+                                        </div>
                                     </div>
-                                    <div form-group>
-                                        <label for="spec_dep">Department</label>
-                                        <select name="spec_dep" id="spec_dep" required>
-                                            <option value="">select departement</option>
-                                            <% for(i=0; i<dep.length; i++) { %>
-                                                <option value="<%=dep[i].departement%>"> <%=dep[i].departement %> </option>
-                                            <% } %>
-                                        </select>
+                                    <div class="form-group special-info">
+                                        <label for="spec_dep" class="label">Department</label>
+                                        <div class="input-fa">
+                                            <i class="fa-solid fa-building-columns"></i>
+                                            <select name="spec_dep" id="spec_dep" required>
+                                                <option value="">select departement</option>
+                                                <% for(i=0; i<dep.length; i++) { %>
+                                                    <option value="<%=dep[i].departement%>"> <%=dep[i].departement %> </option>
+                                                <% } %>
+                                            </select>
+                                        </div>
                                     </div>
                                     <% for(i=0; i<niv.length; i++) { %>
                                         <div class="form-group">
-                                                <label for="<%=niv[i].id%>"><%=niv[i].libelle%></label>
-                                                <input type="checkbox" id="<%=niv[i].id%>" name="niv_spec" value="<%=niv[i].id%>"  />
+                                                <label for="<%=niv[i].id%>" class="label-checkbox">
+                                                    <div class="circle-checkbox">
+                                                        <!-- To create a circular checkbox -->
+                                                    </div>
+                                                    <input type="checkbox" id="<%=niv[i].id%>" name="niv_spec" class="checkbox" value="<%=niv[i].id%>"  />
+                                                    <p>
+                                                        <%=niv[i].libelle%>
+                                                    </p>
+                                                </label>
                                             
                                         </div>
                                     <% } %>
                                 </div>
-                                <div class="btn-icon">
-                                    <div class="icon">
-                                        <!-- une illustration -->
-                                    </div>
-                                    <div class="btn">
+                                <div class="btn">
 
-                                        <button type="reset" class="btn-reset">
-                                            Reset
-                                        </button>
+                                    <button type="reset" class="btn-reset">
+                                        Reset
+                                    </button>
 
-                                        <button type="submit" class="btn-submit">
-                                            Submit
-                                        </button>
+                                    <button type="submit" class="btn-submit">
+                                        Submit
+                                    </button>
 
-                                    </div>
                                 </div>
                             </form>
+                            
+                            <div class="form-img">
+                                <img src="img/img1.png" alt="">
+                            </div>
                         </div>
-                        
-                        <footer>
-                            <h4>Creez vos emploi de temps avec simplicité </h4>
-                        </footer>
 
                     </article>
                 </main>

@@ -6,15 +6,15 @@ var contentLength= content.length,
 
 
 // function 
-function onglet(evt, nom){
+function onglet(evt, name){
    for(var i=0; i < contentLength; i++){
       content[i].style.display='none';
-      content[i].classList.remove('affiche');
+      content[i].classList.remove('show'); // i have change 'affiche' to 'show'
    }
    for(var i=0; i < menuLength; i++){
       menu[i].classList.remove('active');
    }
-   document.getElementById(nom).style.display= 'block';
+   document.getElementById(name).style.display= 'flex';
    evt.currentTarget.classList.add('active')
 }
 
@@ -53,8 +53,8 @@ for(var checkbox of check){
 
 
 
-//fonction permettant de verifier si au moins une des cases a cocher du formulaire est selectionnee
-//Sinon le formulaire ne peut etre soumis et un message d'erreur est envoyer 
+//Function to check whether at least one of the form’s checkboxes has been ticked
+//If not, the form cannot be submitted and an error message is displayed 
 (function(){
       var niv= document.getElementById('form_niv'),
          spec= document.getElementById('form_spec'),
@@ -74,7 +74,7 @@ for(var checkbox of check){
             }
          };
          if(valid_checkbox.length==0){
-            alert('Vous devez selectionner tous les departements qui offre une formation dans ce niveau');
+            alert('You must select all the departments that offer courses at this level');
             event.preventDefault();
          }
       }, false);
@@ -87,7 +87,7 @@ for(var checkbox of check){
             }
          };
          if(valid_checkbox.length==0){
-            alert('Vous devez selectionner tous les niveaux ou la specialite apparaitra');
+            alert('You must select all the levels where the specialty will appear');
             event.preventDefault();
          }
 
@@ -101,7 +101,7 @@ for(var checkbox of check){
             }
          };
          if(valid_checkbox.length==0){
-            alert('Vous devez selectionner toutes les specialite ou cette ue sera dispense');
+            alert('You must select all the courses in which this unit will be dispensed.');
             event.preventDefault();
          }
       }, false);
@@ -142,3 +142,25 @@ _('niv').onchange= function(){
 _('filiere').onchange=function(){
    fetch_data(_('filiere'), _('tab_spec'), 'load_specialite')
 }
+
+
+/*****************************************************************************/
+/**********************  Custumer checkbox of academic page *****************************/
+let label = document.querySelectorAll(".label-checkbox")
+
+label.forEach((item, index) => {
+   let checkbox = item.querySelector(".checkbox");
+   let circle_checkbox = item.querySelector(".circle-checkbox")
+
+   item.onclick = function(){
+      if(checkbox.checked){
+      circle_checkbox.style.backgroundColor = "#68509D"
+      circle_checkbox.innerHTML = "<span class ='custom_check'></span>"
+      }else{
+      circle_checkbox.style.backgroundColor = "transparent"
+
+      }
+
+   }
+}
+)
