@@ -1,26 +1,10 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333; /*line to delete*/
-}
 
-body{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
-}
-#main{
+/* #main{
     width: 100%;
     margin-left: 20px;
     margin-top: 15px;
     border: 2px solid black;
-}
+}  */
 
 /* header{
     padding: 20px 20px 0px 30px;
@@ -109,6 +93,12 @@ nav button.active{
    animation: animation 0.5s ease-out ;
 } */
 
+
+
+
+
+
+/************************************************************/
 @keyframes animation {
    from {opacity:0;}
    to {opacity:1;}
@@ -127,12 +117,12 @@ legend{
     font-family: algerian, arial, Georgia, 'Times New Roman', Times, serif;
     padding: 5px;
 
-}
+} 
 
 form table{
     padding-top: 20px;
     margin:auto;
-}
+} */
 
 /*********mise en forme des bouton de validation des formulaire******/
 .btn{
@@ -143,7 +133,7 @@ form table{
     transition: all .5s ease-in;
 }
 
-input[type=submit]:hover, input[type=reset]:hover{
+ input[type=submit]:hover, input[type=reset]:hover{
     background-color: rgb(202, 114, 224);
     border-color: rgb(216, 188, 223);
     -moz-box-shadow: 0 0 8px rgb(101, 23, 122); 
@@ -174,6 +164,16 @@ input:focus {
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+/**************************************************/
 
 
 /***** Style du footer ***/

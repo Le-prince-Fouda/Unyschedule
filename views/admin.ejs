@@ -3,7 +3,8 @@
         <head>
             <title>Homepage</title>
             <meta charset="utf-8"/>
-            <link rel="stylesheet" type="text/css" href="css/academic.css">
+            <!-- <link rel="stylesheet" type="text/css" href="css/academic.css"> -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link rel="stylesheet" type="text/css" href="css/front.css">
             <link rel="stylesheet" type="text/css" href="css/admin.css">
             <script src="js/academic.js" defer></script>
@@ -27,14 +28,88 @@
                         <nav>
                             <a href="/academic"><button>acces to academic pole</button></a>
                             <a href="/timetable"><button>Create timetable</button></a>
-                            <button onclick="onglet(event, 'data')">view data</button>
+                            <button onclick="onglet(event, 'view-data')">view data</button>
                             <button onclick="onglet(event, 'timetable')"> view timetable</button>
                         </nav>
                      </div>
                     <article class="display">
-            
+
+                        <!-- Card container -->
+                        <div id="view-data">
+                            <h2 class="view-data-header">
+                                Recorded Data
+                            </h2>
+                            <div class="card-container-img">
+                                <div class="card-container">
+                                    <div class="card card-prof">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-solid fa-user-tie"></i>
+                                            </span>
+                                            <span class="card-title">Professors</span>
+                                        </div>
+                                        <span>33</span>
+
+                                    </div>
+                                    <div class="card card-room">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-door-open"></i>
+                                            </span>
+                                            <span class="card-title">Rooms</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    <div class="card card-subject">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-book-open"></i>
+                                            </span>
+                                            <span class="card-title">Subjects</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    
+                                    <div class="card card-year">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-graduation-cap"></i>
+                                            </span>
+                                            <span class="card-title">Academic Years</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    <div class="card card-special">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-regular fa-star"></i>
+                                            </span>
+                                            <span class="card-title">Specialisation</span>
+                                        </div>
+                                        <span class="card-value">33</span>
+                                    </div>
+                                    
+                                    <div class="card card-dep">
+                                        <div>
+                                            <span class="card-icon"> 
+                                                <i class="fa-solid fa-building-columns"></i>
+                                            </span>
+                                            <span class="card-title">Department</span>
+                                        </div>
+                                        <span>33</span>
+                                    </div>
+                                </div>
+                                <div class="card-img">
+                                    <img src="img/img5.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Data container -->
                         <div id="data">
-                            <h1 class="titre">data registered</h1>
+                            <h1 class="titre">recorded data</h1>
+
+
+
                             <section class="element">
                                 <h2>Les niveau</h2>
                                 <% for(i=0; i<niv.length; i++){ %>
@@ -45,6 +120,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les Departement</h2>
                                 <% for(i=0; i<dep.length; i++){ %>
@@ -55,6 +131,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Enseignant</h2>
                                 <% for(i=0; i<ens.length; i++){ %>
@@ -67,6 +144,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les Salles</h2>
                                 <% for(i=0; i<sal.length; i++){ %>
@@ -77,6 +155,7 @@
                                     </table> 
                                 <% } %>
                             </section>
+
                             <section class="element">
                                 <h2>Les UEs</h2>
                                 <% for(i=0; i<ue.length; i++){ %>
@@ -91,16 +170,14 @@
             
                         </div>
             
+                        <!-- schedule container -->
                         <div id="timetable">
                             <h1 class="titre">Timetable registered</h1>
                             
                         </div>
             
                     </article>
-                </main>
-                <footer>
-                    <h3>Quick - Easy - Intuitiv</h3>
-                </footer>  
+                </main> 
             </div>
         </body>
     </html>
